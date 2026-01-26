@@ -1,13 +1,19 @@
 .header {
-  padding-top: 6rem;
+  padding-top: 3rem;
   padding-bottom: var(--section-gap);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
 }
 
 .terminal {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--text-muted);
-  margin-bottom: var(--space-lg);
 }
 
 .prompt {

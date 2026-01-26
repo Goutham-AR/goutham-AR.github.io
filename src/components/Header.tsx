@@ -1,11 +1,20 @@
 import styles from "./Header.module.css"
+import ThemeToggle from "./ThemeToggle"
 
-const Header = () => {
+interface HeaderProps {
+  theme: "dark" | "light"
+  onThemeToggle: () => void
+}
+
+const Header = ({ theme, onThemeToggle }: HeaderProps) => {
   return (
     <header className={`section ${styles.header}`}>
-      <div className={styles.terminal}>
-        <span className={styles.prompt}>$</span>
-        <span className={styles.command}> whoami</span>
+      <div className={styles.topBar}>
+        <div className={styles.terminal}>
+          <span className={styles.prompt}>$</span>
+          <span className={styles.command}> whoami</span>
+        </div>
+        <ThemeToggle theme={theme} onToggle={onThemeToggle} />
       </div>
       
       <h1 className={styles.name}>Goutham AR</h1>

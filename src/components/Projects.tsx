@@ -11,7 +11,7 @@ const projects: Project[] = [
   {
     title: "Programming Language (Compiler/VM)",
     description: "Designed a custom compiler and Virtual Machine. Initially built in C++, then rewritten in Rust to leverage memory safety and concurrency features.",
-    tech: ["C++", "Rust", "LLVM"],
+    tech: ["C++", "Rust"],
     highlight: "Systems Programming",
   },
   {
