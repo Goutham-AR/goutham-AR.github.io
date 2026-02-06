@@ -12,6 +12,14 @@ const Header = ({ theme, onThemeToggle }: HeaderProps) => {
   const location = useLocation()
   const isHome = location.pathname === "/"
 
+  // Calculate available navigation items
+  const navItems = [
+    { to: "/", label: "Home" },
+    ...(config.features.blog ? [{ to: "/blog", label: "Blog" }] : [])
+  ]
+
+  const showNav = navItems.length > 1
+
   return (
     <header className={`${styles.header} ${isHome ? "" : styles.compact}`}>
       <div className="container">
@@ -21,16 +29,23 @@ const Header = ({ theme, onThemeToggle }: HeaderProps) => {
               <span className={styles.prompt}>$</span>
               <span className={styles.command}> whoami</span>
             </Link>
-            <nav className={styles.nav}>
-              <Link to="/" className={location.pathname === "/" ? styles.navLinkActive : styles.navLink}>
-                Home
-              </Link>
-              {config.features.blog && (
-                <Link to="/blog" className={location.pathname.startsWith("/blog") ? styles.navLinkActive : styles.navLink}>
-                  Blog
-                </Link>
-              )}
-            </nav>
+            {showNav && (
+              <nav className={styles.nav}>
+                {navItems.map((item) => (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    className={
+                      item.to === "/"
+                        ? (location.pathname === "/" ? styles.navLinkActive : styles.navLink)
+                        : (location.pathname.startsWith(item.to) ? styles.navLinkActive : styles.navLink)
+                    }
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            )}
           </div>
           <ThemeToggle theme={theme} onToggle={onThemeToggle} />
         </div>
