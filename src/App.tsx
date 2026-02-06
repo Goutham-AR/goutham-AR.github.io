@@ -1,24 +1,30 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 import Header from "./components/Header"
-import Skills from "./components/Skills"
-import Experience from "./components/Experience"
-import Projects from "./components/Projects"
-import Education from "./components/Education"
-import Footer from "./components/Footer"
+import Home from "./components/Home"
+import BlogList from "./components/Blog/BlogList"
+import BlogPost from "./components/Blog/BlogPost"
 import { useTheme } from "./hooks/useTheme"
+import { config } from "./config"
 
 function App() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <main className="container">
+    <BrowserRouter>
       <Header theme={theme} onThemeToggle={toggleTheme} />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Footer />
-    </main>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {config.features.blog && (
+            <>
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+            </>
+          )}
+        </Routes>
+      </main>
+    </BrowserRouter>
   )
 }
 

@@ -1,6 +1,11 @@
 .header {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
   padding-bottom: var(--section-gap);
+  border-bottom: 1px solid var(--border);
+}
+
+.compact {
+  padding-bottom: 1.5rem;
 }
 
 .topBar {
@@ -10,10 +15,55 @@
   margin-bottom: var(--space-lg);
 }
 
-.terminal {
+.left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+}
+
+.logo {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo:hover {
+  color: var(--accent);
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.navLink,
+.navLinkActive {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--accent);
+}
+
+.navLinkActive {
+  color: var(--accent);
+}
+
+.navLinkActive::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--accent);
 }
 
 .prompt {
@@ -68,9 +118,21 @@
   background-color: rgba(249, 115, 22, 0.1);
 }
 
+@media (max-width: 768px) {
+  .left {
+    gap: var(--space-lg);
+  }
+  
+  .nav {
+    gap: var(--space-md);
+  }
+}
+
 @media (max-width: 640px) {
-  .header {
-    padding-top: 3rem;
+  .left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
   }
   
   .links {

@@ -1,5 +1,7 @@
+import { Link, useLocation } from "react-router-dom"
 import styles from "./Header.module.css"
 import ThemeToggle from "./ThemeToggle"
+import { config } from "../config"
 
 interface HeaderProps {
   theme: "dark" | "light"
@@ -7,41 +9,58 @@ interface HeaderProps {
 }
 
 const Header = ({ theme, onThemeToggle }: HeaderProps) => {
+  const location = useLocation()
+  const isHome = location.pathname === "/"
+
   return (
-    <header className={`section ${styles.header}`}>
-      <div className={styles.topBar}>
-        <div className={styles.terminal}>
-          <span className={styles.prompt}>$</span>
-          <span className={styles.command}> whoami</span>
+    <header className={`${styles.header} ${isHome ? "" : styles.compact}`}>
+      <div className="container">
+        <div className={styles.topBar}>
+          <div className={styles.left}>
+            <Link to="/" className={styles.logo}>
+              <span className={styles.prompt}>$</span>
+              <span className={styles.command}> whoami</span>
+            </Link>
+            <nav className={styles.nav}>
+              <Link to="/" className={location.pathname === "/" ? styles.navLinkActive : styles.navLink}>
+                Home
+              </Link>
+              {config.features.blog && (
+                <Link to="/blog" className={location.pathname.startsWith("/blog") ? styles.navLinkActive : styles.navLink}>
+                  Blog
+                </Link>
+              )}
+            </nav>
+          </div>
+          <ThemeToggle theme={theme} onToggle={onThemeToggle} />
         </div>
-        <ThemeToggle theme={theme} onToggle={onThemeToggle} />
+        
+        {isHome && (
+          <>
+            <h1 className={styles.name}>Goutham AR</h1>
+            <p className={styles.role}>Software Developer</p>
+            
+            <nav className={styles.links}>
+              <a href="mailto:argouthu8400@gmail.com" aria-label="Email">
+                <EmailIcon />
+                <span>Email</span>
+              </a>
+              <a href="tel:+918137040474" aria-label="Phone">
+                <PhoneIcon />
+                <span>Phone</span>
+              </a>
+              <a href="https://www.linkedin.com/in/goutham-a-r-989424190" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <LinkedInIcon />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/Goutham-AR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <GitHubIcon />
+                <span>GitHub</span>
+              </a>
+            </nav>
+          </>
+        )}
       </div>
-      
-      <h1 className={styles.name}>Goutham AR</h1>
-      <p className={styles.role}>Software Developer</p>
-      {/* <p className={styles.location}>
-        <LocationIcon />
-        Ernakulam, Kerala, India
-      </p> */}
-      
-      <nav className={styles.links}>
-        <a href="mailto:argouthu8400@gmail.com" aria-label="Email">
-          <EmailIcon />
-          <span>Email</span>
-        </a>
-        <a href="tel:+918137040474" aria-label="Phone">
-          <PhoneIcon />
-          <span>Phone</span>
-        </a>
-        <a href="https://www.linkedin.com/in/goutham-a-r-989424190" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <LinkedInIcon />
-          <span>LinkedIn</span>
-        </a>
-        <a href="https://github.com/Goutham-AR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <GitHubIcon />
-          <span>GitHub</span>
-        </a>
-      </nav>
     </header>
   )
 }
