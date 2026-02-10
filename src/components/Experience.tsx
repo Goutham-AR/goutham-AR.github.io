@@ -13,11 +13,11 @@ const experiences: ExperienceItem[] = [
     company: "Zero Pixels",
     period: "Sep 2023 - Present",
     highlights: [
-      "Designed a scalable Azure Function app using AI to cleanse invoice line items. The system processes 200K+ Kafka messages per day and utilizes PostgreSQL for analytics.",
-      "Built a Kafka-to-Azure Queue pipeline featuring custom offset management to ensure exactly-once processing and horizontal scalability.",
-      "Diagnosed synchronous HTTP bottlenecks and re-architected the system into an asynchronous background worker model, achieving sub-second API response times.",
-      "Integrated SignalR for real-time frontend updates on job progress, combined with secure presigned URLs for Azure Blob Storage downloads.",
-      "Developed a Node.js proxy for Druid with caching and authorization; implemented fine-grained access control using Open Policy Agent (OPA) and enhanced observability with Grafana.",
+      "Developed an autonomous AI system (AIDO) that eliminated manual coding tasks by automatically implementing changes from Azure DevOps work items through a multi agent orchestration engine, reducing average ticket resolution time.",
+      "Eliminated critical performance bottlenecks by transitioning synchronous reporting to an asynchronous background worker architecture, integrated a real time progressive download manager that reduced API response times to sub-second levels and solved the issue of \"blind\" downloads with live progress tracking and automatic retries.",
+      "Diagnosed and fixed a critical 30 second synchronization lag in an asynchronous architecture that caused stale invoice data, restored system integrity to high accuracy and eliminated customer-reported discrepancies.",
+      "Built a high concurrency Go server serving 20+ developers daily to offload heavy unit testing and SonarQube analysis from local machines, saving the engineering team local computation time and resources per build cycle.",
+      "Engineered an Azure based pipeline with at least once processing guarantees to handle 200K+ daily messages, enabling real time cleansing and analysis of massive volumes of fragmented invoice data.",
     ],
   },
   {
@@ -25,9 +25,9 @@ const experiences: ExperienceItem[] = [
     company: "Zero Pixels",
     period: "May 2023 - Sep 2023",
     highlights: [
-      "Built a dating app backend using Node.js, Express, and MongoDB, optimizing queries via custom indexes for a 40% speed increase.",
-      "Led the development of a B2B dashboard using React, React Query, and ECharts for data visualization.",
-      "Patched a private fork of the 'Agenda' library for background processing and resolved critical production bugs in collaboration with mobile developers.",
+      "Optimized database query patterns and indexing for a high traffic messaging app, achieving a reduction in query response times and smoother real time user interactions.",
+      "Integrated and maintained Agenda for background job processing, including patching a private fork due to upstream inactivity.",
+      "Replaced static reporting with an interactive B2B dashboard, providing stakeholders with real time data visualizations and automated API integrations that reduced reporting cycle time from weekly to on-demand.",
     ],
   },
 ]
