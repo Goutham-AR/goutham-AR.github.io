@@ -42,15 +42,15 @@
 
 /* Light Mode */
 :root[data-theme="light"] {
-  --bg-primary: #faf8f5;
-  --bg-secondary: #f0ebe4;
-  --bg-tertiary: #e5dfd6;
-  --text-primary: #1c1917;
-  --text-secondary: #57534e;
-  --text-muted: #78716c;
-  --accent: #ea580c;
-  --accent-hover: #c2410c;
-  --border: #d6d3d1;
+  --bg-primary: #f9f6f0;
+  --bg-secondary: #f7f3eb;
+  --bg-tertiary: #f0ebe0;
+  --text-primary: #2c2518;
+  --text-secondary: #6b5d4a;
+  --text-muted: #8b7d6b;
+  --accent: #d97706;
+  --accent-hover: #b45309;
+  --border: #e6dccf;
   color-scheme: light;
 }
 
