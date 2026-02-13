@@ -1,0 +1,24 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Page views collection - allow writes from client
+    match /pageViews/{document=**} {
+      allow create, write: if true;
+      allow read, delete: if false;
+    }
+    
+    // Sessions collection - allow writes from client
+    match /sessions/{document=**} {
+      allow create, write, update: if true;
+      allow read, delete: if false;
+    }
+    
+    // Metrics collection - allow writes, restrict reads
+    match /metrics/{document=**} {
+      allow create, write, update: if true;
+      allow read, delete: if false;
+    }
+  }
+}
