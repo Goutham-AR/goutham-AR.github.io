@@ -9,22 +9,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Programming Language (Compiler/VM)",
-    description: "Designed a custom compiler and Virtual Machine. Initially built in C++, then rewritten in Rust to leverage memory safety and concurrency features.",
-    tech: ["C++", "Rust"],
+    title: "Bytecode Compiled Interpreted Programming Language",
+    description: "Features a lexical analyzer, recursive descent parser, and stack-based virtual machine with OOP support.",
+    tech: ["C++", "Compiler Design", "VM"],
     highlight: "Systems Programming",
   },
   {
-    title: "3D Game Engine",
-    description: "Built a lightweight engine using C++ and OpenGL. Features include custom rendering, input handling, and physics modules with a focus on modularity.",
+    title: "Cross-platform Game Engine",
+    description: "Uses OpenGL, featuring a modular layer-based architecture, custom 2D/3D renderers, and an event-driven input system.",
     tech: ["C++", "OpenGL", "GLSL"],
     highlight: "Graphics Programming",
   },
   {
     title: "Distributed Key-Value Store",
-    description: "Implemented a distributed store in Go using the RAFT consensus algorithm. Features leader election, log replication, and fault tolerance.",
-    tech: ["Go", "RAFT", "gRPC"],
-    highlight: "Distributed Systems",
+    description: "Implements RAFT consensus for leader election and log replication with fault tolerance.",
+    tech: ["Go", "RAFT", "Distributed Systems"],
+    highlight: "Backend Systems",
   },
 ]
 

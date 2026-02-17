@@ -13,11 +13,11 @@ const experiences: ExperienceItem[] = [
     company: "Zero Pixels",
     period: "Sep 2023 - Present",
     highlights: [
-      "Developed an autonomous AI system (AIDO) that eliminated manual coding tasks by automatically implementing changes from Azure DevOps work items through a multi agent orchestration engine, reducing average ticket resolution time.",
-      "Eliminated critical performance bottlenecks by transitioning synchronous reporting to an asynchronous background worker architecture, integrated a real time progressive download manager that reduced API response times to sub-second levels and solved the issue of \"blind\" downloads with live progress tracking and automatic retries.",
-      "Diagnosed and fixed a critical 30 second synchronization lag in an asynchronous architecture that caused stale invoice data, restored system integrity to high accuracy and eliminated customer-reported discrepancies.",
-      "Built a high concurrency Go server serving 20+ developers daily to offload heavy unit testing and SonarQube analysis from local machines, saving the engineering team local computation time and resources per build cycle.",
-      "Engineered an Azure based pipeline with at least once processing guarantees to handle 200K+ daily messages, enabling real time cleansing and analysis of massive volumes of fragmented invoice data.",
+      "Developed AIDO, an autonomous AI system that automates coding tasks from Azure DevOps via a multi-agent orchestration engine to reduce ticket resolution time.",
+      "Redesigned the report generation system from synchronous requests to an asynchronous architecture using WebSockets, providing instant API acknowledgments and real-time progress updates.",
+      "Fixed a critical 30-second synchronization lag in asynchronous architecture to resolve production data inconsistencies and stale invoice data.",
+      "Built a high-concurrency Go server to centralize unit testing and SonarQube analysis, saving local computation resources for over 20 developers.",
+      "Engineered an Azure-based pipeline with at least-once processing guarantees to handle over 200K daily messages for real-time invoice data cleansing.",
     ],
   },
   {
@@ -25,9 +25,9 @@ const experiences: ExperienceItem[] = [
     company: "Zero Pixels",
     period: "May 2023 - Sep 2023",
     highlights: [
-      "Optimized database query patterns and indexing for a high traffic messaging app, achieving a reduction in query response times and smoother real time user interactions.",
-      "Integrated and maintained Agenda for background job processing, including patching a private fork due to upstream inactivity.",
-      "Replaced static reporting with an interactive B2B dashboard, providing stakeholders with real time data visualizations and automated API integrations that reduced reporting cycle time from weekly to on-demand.",
+      "Optimized database query patterns and indexing for a high-traffic messaging application to improve response times.",
+      "Integrated and maintained Agenda for background job processing, including patching a private fork.",
+      "Developed three dashboard modules in React using ECharts for B2B analytics data visualization.",
     ],
   },
 ]

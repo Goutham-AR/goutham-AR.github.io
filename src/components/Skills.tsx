@@ -1,8 +1,8 @@
 import styles from "./Skills.module.css"
 
 const skillsData = {
-  "Programming Languages": ["C++", "Golang", "C", "Java", "TypeScript", "Python", "C#", "Zig"],
-  "Frameworks & Libraries": ["React", "Gin", "Spring", "Express", "Qt", "FastAPI", "NestJs", "ASP.Net"],
+  "Languages": ["C++", "Golang", "C", "Java", "TypeScript", "Python", "C#", "Zig"],
+  "Frameworks/Libraries": ["React", "Gin", "Express", "FastAPI", "NestJs", "ASP.Net"],
   "Databases": ["MySQL", "PostgreSQL", "MongoDB"],
   "Others": ["Kafka", "Druid", "Azure", "Docker", "Kubernetes", "SignalR", "Grafana", "ECharts"],
 }
