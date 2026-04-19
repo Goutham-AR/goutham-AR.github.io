@@ -54,6 +54,12 @@ const Header = ({ theme, onThemeToggle }: HeaderProps) => {
           <>
             <h1 className={styles.name}>Goutham A R</h1>
             <p className={styles.role}>Software Developer</p>
+            <p className={styles.summary}>
+              Full-stack engineer with 2+ years of experience building high-throughput data pipelines,
+              async architectures, and AI-powered automation systems. Driven by a compulsion to understand
+              systems from the inside out: compilers, operating systems, GPU pipelines, and the layers
+              that are treated as black boxes.
+            </p>
             
             <nav className={styles.links}>
               <a href="mailto:argouthu8400@gmail.com" aria-label="Email">

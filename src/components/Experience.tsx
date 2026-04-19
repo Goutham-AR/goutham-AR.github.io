@@ -11,23 +11,15 @@ const experiences: ExperienceItem[] = [
   {
     role: "Software Developer",
     company: "Zero Pixels",
-    period: "Sep 2023 - Present",
+    period: "May 2023 – Present",
     highlights: [
-      "Developed AIDO, an autonomous AI system that automates coding tasks from Azure DevOps via a multi-agent orchestration engine to reduce ticket resolution time.",
-      "Redesigned the report generation system from synchronous requests to an asynchronous architecture using WebSockets, providing instant API acknowledgments and real-time progress updates.",
-      "Fixed a critical 30-second synchronization lag in asynchronous architecture to resolve production data inconsistencies and stale invoice data.",
-      "Built a high-concurrency Go server to centralize unit testing and SonarQube analysis, saving local computation resources for over 20 developers.",
-      "Engineered an Azure-based pipeline with at least-once processing guarantees to handle over 200K daily messages for real-time invoice data cleansing.",
-    ],
-  },
-  {
-    role: "Software Developer Intern",
-    company: "Zero Pixels",
-    period: "May 2023 - Sep 2023",
-    highlights: [
-      "Optimized database query patterns and indexing for a high-traffic messaging application to improve response times.",
-      "Integrated and maintained Agenda for background job processing, including patching a private fork.",
-      "Developed three dashboard modules in React using ECharts for B2B analytics data visualization.",
+      "Built AIDO, an autonomous multi-agent system that reads Azure DevOps work items and implements code changes end-to-end, eliminating manual coding for ~40 recurring ticket types and cutting average resolution time from ~3 days to under 4 hours.",
+      "Redesigned a synchronous report generation system into an async architecture with WebSocket-based (SignalR) progress streaming, reducing perceived wait time from 60–90 seconds of blocking to sub-second acknowledgment with live status updates.",
+      "Diagnosed and resolved a 60-second synchronisation lag in an async invoice pipeline surfacing stale data to customers, root-caused to an event ordering issue and fixed with zero downtime.",
+      "Built a high-concurrency Go server to offload unit test execution and SonarQube analysis from developer machines, serving 30+ engineers daily and saving an estimated 15–20 minutes per developer per build cycle.",
+      "Engineered an Azure-based event pipeline with at-least-once delivery guarantees to process 200K+ daily invoice messages, enabling real-time cleansing and downstream analytics on fragmented financial data.",
+      "Patched and maintained a private fork of the Agenda job scheduler after upstream went inactive, keeping background job processing stable across a production deployment.",
+      "Sole developer for a client — built and delivered a data-heavy React web application end-to-end, including complex ECharts visualisations (multi-series time-series, drill-down charts), server-state management with TanStack Query, and REST API integration.",
     ],
   },
 ]

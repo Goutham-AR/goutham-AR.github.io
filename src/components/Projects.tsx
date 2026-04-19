@@ -9,21 +9,21 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Bytecode Compiled Interpreted Programming Language",
-    description: "Features a lexical analyzer, recursive descent parser, and stack-based virtual machine with OOP support.",
-    tech: ["C++", "Compiler Design", "VM"],
+    title: "Solv",
+    description: "Complete compiler toolchain from scratch: lexer, recursive descent parser, bytecode compiler, and a stack-based VM with OOP support and an interactive REPL. ~8,000 lines of C; benchmarks run 3–5× faster than a naive tree-walk interpreter.",
+    tech: ["C", "Compiler Design", "VM"],
     highlight: "Systems Programming",
   },
   {
-    title: "Cross-platform Game Engine",
-    description: "Uses OpenGL, featuring a modular layer-based architecture, custom 2D/3D renderers, and an event-driven input system.",
-    tech: ["C++", "OpenGL", "GLSL"],
+    title: "Cross-platform 2D/3D Game Engine",
+    description: "Modular, layer-based engine with custom 2D/3D renderers, an event-driven input system, and CMake build configuration. Integrates GLFW, ImGui, and GLM; capable of rendering ~50K sprites at 60 fps on mid-range hardware.",
+    tech: ["C++", "OpenGL", "GLFW", "ImGui"],
     highlight: "Graphics Programming",
   },
   {
-    title: "Distributed Key-Value Store",
-    description: "Implements RAFT consensus for leader election and log replication with fault tolerance.",
-    tech: ["Go", "RAFT", "Distributed Systems"],
+    title: "Anchor DB",
+    description: "Distributed key-value store built from scratch in C, progressing from an in-memory hash table through a full LSM-tree storage engine (MemTable, SSTable, WAL, compaction, Bloom filters) toward Raft-based consensus and hash-ring partitioning.",
+    tech: ["C", "LSM-Tree", "Distributed Systems"],
     highlight: "Backend Systems",
   },
 ]

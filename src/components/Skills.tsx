@@ -1,10 +1,10 @@
 import styles from "./Skills.module.css"
 
 const skillsData = {
-  "Languages": ["C++", "Golang", "C", "Java", "TypeScript", "Python", "C#", "Zig"],
-  "Frameworks/Libraries": ["React", "Gin", "Express", "FastAPI", "NestJs", "ASP.Net"],
-  "Databases": ["MySQL", "PostgreSQL", "MongoDB"],
-  "Others": ["Kafka", "Druid", "Azure", "Docker", "Kubernetes", "SignalR", "Grafana", "ECharts"],
+  "Core Languages": ["C", "Go", "TypeScript", "C++", "Python", "C#"],
+  "Backend / Infra": ["Gin", "Express", "NestJS", "FastAPI", "ASP.NET", "Docker", "Kubernetes", "Azure"],
+  "Frontend": ["React", "ECharts"],
+  "Data / Observability": ["PostgreSQL", "MongoDB", "Apache Druid", "Kafka", "Milvus", "Grafana"],
 }
 
 const Skills = () => {
